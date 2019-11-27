@@ -16,8 +16,8 @@
   <% end %>
 </div>
 
-<% if products.any? %>
-  <!-- <div class="row sorting">
+<%if params[:controller]!='spree/home' && @taxon.leaf? %>
+  <div class="row sorting">
     <div class="col-sm-6 dropdown">
       <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Sort By
@@ -28,7 +28,9 @@
         <li class="dropdown-item"><%= link_to "Highest price", params.merge(sorting: :descend_by_master_price).permit(:sorting) %></li>
       </ul>
     </div>
-  </div> -->
+  </div> 
+<% end %>
+<% if products.any? %>
   <div id="products" class="row d-flex" data-hook="products-list">
     <div class="owl-carousel owl-theme">
       <%= render partial: 'spree/products/product', collection: products, locals: { taxon: @taxon } %>
