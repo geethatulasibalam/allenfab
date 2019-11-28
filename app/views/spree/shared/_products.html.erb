@@ -16,7 +16,7 @@
   <% end %>
 </div>
 
-<%if params[:controller]!='spree/home' && @taxon.leaf? %>
+ 
   <div class="row sorting">
     <div class="col-sm-6 dropdown">
       <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,7 +29,7 @@
       </ul>
     </div>
   </div> 
-<% end %>
+ 
 <% if products.any? %>
   <div id="products" class="row d-flex" data-hook="products-list">
     <div class="owl-carousel owl-theme">

@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   # the default of "spree".
   mount Spree::Core::Engine, at: '/'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  Spree::Core::Engine.add_routes do
+    resources :products do
+      get :autocomplete_taxon_name, :on => :collection
+    end
+  end
 end

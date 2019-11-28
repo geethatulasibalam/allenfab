@@ -9,7 +9,8 @@
     <% end %>
   </div>
   <div class="form-group">
-    <%= search_field_tag :keywords, params[:keywords], placeholder: Spree.t(:search), class: "form-control" %>
+    <%= search_field_tag :keywords, params[:keywords], placeholder: Spree.t(:search), class: "form-control", data: {autocomplete: autocomplete_taxon_name_products_path} %>
   </div>
   <%= submit_tag Spree.t(:search), name: nil, class: "btn btn-success" %>
 <% end %>
+ 

@@ -14,3 +14,4 @@
 //= require spree/frontend/spree_wishlist
 //= require owl.carousel
 //= require spree/frontend/spree_reviews
+//= require jquery-ui/widgets/autocomplete
