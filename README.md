@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+[POSTMAN doc](https://www.getpostman.com/collections/6c4b5b56b69d31123af8)
